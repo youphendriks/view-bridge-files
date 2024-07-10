@@ -25,6 +25,19 @@ git clone https://github.com/youphendriks/viewbridgefiles.git
 ## 4. Set the driver in SQuirreL SQL
 Launch SQuirrel SQL and click "Drivers" on the far left.
 ![click "Drivers"](https://github.com/youphendriks/viewbridgefiles/blob/main/images/1drivers.png)
+Find "Apache Derby embedded" in the list, right-click on it and click "Modify Driver...".
+![click "Modify Driver..."](https://github.com/youphendriks/viewbridgefiles/blob/main/images/2modifyDrivers.png)
+Click "Add" on the pop-up window and navigate to the location of the .jar file you've downloaded in step 3.
+Once added you can click "List Drivers", the bottom field, called "Class Name", should now be filled with text.
+Select "org.apache.derby.jdbc.EmbeddedDriver" from the dropdown menu. Then click "Ok".
+![select "Class Name"](https://github.com/youphendriks/viewbridgefiles/blob/main/images/3className.png)
+If everything went correct the "Apache Derby embedded" driver should have a checkmark in front of it.
+![Checkmark](https://github.com/youphendriks/viewbridgefiles/blob/main/images/4checkmark.png)
+You are now all set up to start adding and inspecting .bridge files!
+
+## 5. Adding a .bridge file 
+
+
 
 
 
