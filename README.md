@@ -24,8 +24,7 @@ git clone https://github.com/youphendriks/viewbridgefiles.git
 
 ## 4. Set the driver in SQuirreL SQL
 Launch SQuirrel SQL and click "Drivers" on the far left.
-![click "Drivers"](https://github.com/youphendriks/viewbridgefiles/images/1drivers.png)
-
+![click "Drivers"](https://github.com/youphendriks/viewbridgefiles/blob/main/images/1drivers.png)
 
 
 
