@@ -25,49 +25,60 @@ git clone https://github.com/youphendriks/viewbridgefiles.git
 
 ## 4. Set the driver in SQuirreL SQL  
 Launch SQuirrel SQL and click "Drivers" on the far left.  
+<br/>
 ![click "Drivers"](https://github.com/youphendriks/viewbridgefiles/blob/main/images/1drivers.png)  
+<br/>
 Find "Apache Derby embedded" in the list, right-click on it and click "Modify Driver...".  
+<br/>
 ![click "Modify Driver..."](https://github.com/youphendriks/viewbridgefiles/blob/main/images/2modifyDrivers.png)  
+<br/>
 Click "Add" on the pop-up window and navigate to the location of the .jar file you've downloaded in step 3.  
 Once added you can click "List Drivers", the bottom field, called "Class Name", should now be filled with text.      
 Select "org.apache.derby.jdbc.EmbeddedDriver" from the dropdown menu. Then click "Ok".  
+<br/>
 ![select "Class Name"](https://github.com/youphendriks/viewbridgefiles/blob/main/images/3className.png)  
+<br/>
 If everything went correct the "Apache Derby embedded" driver should have a checkmark in front of it.  
+<br/>
 ![Checkmark](https://github.com/youphendriks/viewbridgefiles/blob/main/images/4checkmark.png)  
+<br/>
 You are now all set up to start adding and inspecting .bridge files!  
 
 # 5. Add and inspect .bridge files  
 First we need to find the directory SQuirreL SQL stores the files. For me it is:  
-```
-~/.squirrel-sql/plugins/derby 
-```
-~/.squirrel-sql/plugins/derby 
+```  
+~/.squirrel-sql/plugins/derby   
+```  
 I found out this was the directory by creating an alias with a wierd name and then searching for it on my system.  
 <br/>
 After establishing the used directory you can start extracting and placing the files. When extracting .bridge file a folder called "database" is found within, these are the files we need.  
 The resulting file structure for me is the following:  
-```
-~/.squirrel-sql/plugins/derby/{{bridge-file-name}} 
-```
+```  
+~/.squirrel-sql/plugins/derby/{{bridge-file-name}}   
+```  
 The contents of the directory is the following:  
-![Directory structure](https://github.com/youphendriks/viewbridgefiles/blob/main/images/5directoryStructure.png)     
+![Directory structure](https://github.com/youphendriks/viewbridgefiles/blob/main/images/5directoryStructure.png)    
 <br/>
 Now that the files are in the correct place, you can add the bridge file to SQuirreL SQL.  
 In the Alias tab you click the "+" to add an alias.  
 ![Add alias](https://github.com/youphendriks/viewbridgefiles/blob/main/images/6addAlias.png)  
+<br/>
 Now you can give the alias a name. For driver you select "Apache Derby embedded" from the dropdown menu.  
-The URL is as follows:
-```
-jdbc:derby:{{bridge-file-name}};
-```
+The URL is as follows:  
+```  
+jdbc:derby:{{bridge-file-name}};  
+```  
 Replace {{bridge-file-name}} with the name you used for the directory before, and don't forget to add ";" at the end!  
+<br/>
 ![Add alias](https://github.com/youphendriks/viewbridgefiles/blob/main/images/7addAlias.png)  
 You can now test the connection, if it succeeds you can click "connect" to add the alias.  
+<br/>
 ![Test connection](https://github.com/youphendriks/viewbridgefiles/blob/main/images/8testConnection.png)  
 
 # 6. Viewing the bridge file
 Finding the information you need is dependant on your .bridge file, but it is important to know you should click the "content" tab to view the contents of the .bridge file.
+<br/>
 ![Content tab](https://github.com/youphendriks/viewbridgefiles/blob/main/images/9contentTab.png)  
 <br/>
-I hope this guide helped! If you run into any problems let me know in person or create an issue on this github page.  
+I hope this guide helped! If you run into any problems, let me know in person or create an issue on this github page.  
 
